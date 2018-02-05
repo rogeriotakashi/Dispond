@@ -1,0 +1,19 @@
+{
+  "name": "nodejssimpleproject",
+  "version": "1.0.0",
+  "description": "An simple Node.js project",
+  "main": "NodeServerScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogeriotakashi/NodeJsSimpleProject.git"
+  },
+  "author": "Rogério Takashi Hirata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogeriotakashi/NodeJsSimpleProject/issues"
+  },
+  "homepage": "https://github.com/rogeriotakashi/NodeJsSimpleProject#readme"
+}
