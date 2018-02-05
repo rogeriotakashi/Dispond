@@ -1,0 +1,27 @@
+body,html{
+	height:100%;
+}
+
+body{
+	background:url("img/bg-login.jpg") no-repeat;
+}
+
+.white {
+	color:#FFF;
+	
+}
+
+.title {
+	background-color: #000;
+	opacity: 0.8;
+}
+
+.email{
+	color:#FFF;
+	font-size: 20px;
+}
+
+.pwd{
+	color:#FFF;
+	font-size: 20px;
+}
