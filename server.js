@@ -31,33 +31,33 @@ app.post('/insertUser', function (req, res) {
     var email = req.body.email;
     var password = req.body.pwd;
 
-    db.collection('Users').insert(
+    db.collection('Users').insertOne(
         {
             username: email,
             pwd: password
         }
     );
 
-    res.send("User insertion success!");
+    res.redirect('/');
 })
 
-// This responds a DELETE request for the /del_user page.
-app.delete('/del_user', function (req, res) {
-    console.log("Got a DELETE request for /del_user");
-    res.send('Hello DELETE');
-})
+app.post('/authentication',function(req,res){
+    var email = req.body.email;
+    var password = req.body.pwd;
+    var query = {username : email, pwd : password};
 
-// This responds a GET request for the /list_user page.
-app.get('/list_user', function (req, res) {
-    console.log("Got a GET request for /list_user");
-    res.send('Page Listing');
-})
+    var cursor = db.collection('Users').findOne(query,function(err,result){
+        if(err) throw err;
 
-// This responds a GET request for abcd, abxcd, ab123cd, and so on
-app.get('/ab*cd', function (req, res) {
-    console.log("Got a GET request for /ab*cd");
-    res.send('Page Pattern Match');
-})
+        if(result == null){
+            res.redirect('/');
+        }else
+            res.redirect('/panel');
+
+
+    });
+    
+});
 
 
 
