@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/rogeriotakashi/NodeJsSimpleProject/issues"
   },
-  "homepage": "https://github.com/rogeriotakashi/NodeJsSimpleProject#readme"
+  "homepage": "https://github.com/rogeriotakashi/NodeJsSimpleProject#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
 }
