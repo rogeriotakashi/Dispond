@@ -7,6 +7,7 @@ var db;
 
 
 app.use(express.static(__dirname + '/css'));
+
 app.use(bodyParser.urlencoded({extended:false}));
 
 
@@ -20,12 +21,12 @@ MongoClient.connect('mongodb://usertest:usertest@ds125578.mlab.com:25578/mydb', 
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
-})
+});
 
 // This responds a POST request for the homepage
 app.get('/register', function (req, res) {
     res.sendFile(__dirname + '/register.html');
-})
+});
 
 app.post('/insertUser', function (req, res) {   
     var email = req.body.email;
@@ -39,6 +40,10 @@ app.post('/insertUser', function (req, res) {
     );
 
     res.redirect('/');
+});
+
+app.get('/panel', function (req, res) {   
+    res.sendFile(__dirname + '/panel.html');
 })
 
 app.post('/authentication',function(req,res){

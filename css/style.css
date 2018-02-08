@@ -12,7 +12,6 @@ body{
 }
 
 .title {
-	background-color: #000;
 	opacity: 0.8;
 }
 
@@ -25,3 +24,4 @@ body{
 	color:#FFF;
 	font-size: 20px;
 }
+
