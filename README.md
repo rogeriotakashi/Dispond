@@ -4,8 +4,8 @@ The project is using mLab DaaS for MongoDB to store new users.
 
 # Project Screenshots
 -Login Page:  
-https://imgur.com/gIUL8cX
--Dashboard  
+https://imgur.com/gIUL8cX  
+-Dashboard:  
 https://imgur.com/WOR2xpr  
 
 
