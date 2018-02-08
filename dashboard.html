@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar fixed-top">
+    <ul class="navbar mr-auto">
+      <a class="navbar-brand" href="#">Task Mannager</a>
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#">My Tasks</a>
+      <a class="nav-link" href="#">Contact</a>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Tast List
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add">New task </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/edit">Edit task</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/remove">Remove task</a>
+          </li>
+        </ul>
+
+        </ul>
+      </nav>
+
+      <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+
+        <h2>To Do List</h2>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Task Name</th>
+                <th>Who is Responsible</th>
+                <th>Date</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Study TSP</td>
+                <td>Rogério</td>
+                <td>09/02/2018</td>
+                <td>edit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+  crossorigin="anonymous"></script>
+
+</html>

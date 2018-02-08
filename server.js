@@ -42,8 +42,8 @@ app.post('/insertUser', function (req, res) {
     res.redirect('/');
 });
 
-app.get('/panel', function (req, res) {   
-    res.sendFile(__dirname + '/panel.html');
+app.get('/dashboard', function (req, res) {   
+    res.sendFile(__dirname + '/dashboard.html');
 })
 
 app.post('/authentication',function(req,res){
@@ -57,7 +57,7 @@ app.post('/authentication',function(req,res){
         if(result == null){
             res.redirect('/');
         }else
-            res.redirect('/panel');
+            res.redirect('/dashboard');
 
 
     });
