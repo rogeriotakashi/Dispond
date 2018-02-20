@@ -64,6 +64,27 @@ app.post('/authentication',function(req,res){
     
 });
 
+app.get("/addtask", function (req,res){ 
+    res.sendFile(__dirname + "/addtask.html");
+});
+
+app.post("/add", function(req,res){
+    var taskname = req.body.taskname;
+    var responsible = req.body.responsible;
+    var date = req.body.date;
+
+    db.collection('Tasks').insertOne(
+        {
+            taskname: taskname,
+            responsible:responsible,
+            date:date
+        }
+    );
+
+    res.redirect('/dashboard');
+});
+
+
 
 
 var server = app.listen(8081, function () {

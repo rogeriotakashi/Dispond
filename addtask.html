@@ -35,7 +35,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/addtask">New task </a>
+            <a class="nav-link" href="/add">New task </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/edit">Edit task</a>
@@ -48,31 +48,28 @@
         </ul>
       </nav>
 
-      <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+      <main class="col-sm-4 offset-sm-3 col-md-5 offset-md-2 pt-3">
 
-        <h2>To Do List</h2>
-        <div class="table-responsive">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Task Name</th>
-                <th>Who is Responsible</th>
-                <th>Date</th>
-                <th>Edit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Study TSP</td>
-                <td>Rogério</td>
-                <td>09/02/2018</td>
-                <td>edit</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <h2>Add new task!</h2>
+
+        <form action="/add" method="POST">
+            <div class="form-group">
+                <label for="taskname">Task Name:</label>
+                <input class="form-control" type="text" name="taskname" id="taskname" >
+            </div>
+            <div class="form-group">
+                <label for="responsible">Resposible:</label>
+                <input class="form-control" type="text" name="responsible" id="resposible">
+            </div>      
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input class="form-control" type="date" name="date" id="date">
+            </div>
+                <input type="submit" class="btn btn-primary" value="Add Task">
+            
+        </form>
+
+
       </main>
     </div>
   </div>
