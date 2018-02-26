@@ -18,6 +18,8 @@
   "homepage": "https://github.com/rogeriotakashi/NodeJsSimpleProject#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "pug": "^2.0.0-rc.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

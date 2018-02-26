@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Dashboard
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+    // Custom styles for this template
+    link(href='dashboard.css', type='text/css', rel='stylesheet')
+  body
+    nav.navbar.fixed-top
+      ul.navbar.mr-auto
+        a.navbar-brand(href='#') Dispond
+        a.nav-link(href='#') Home
+        a.nav-link(href='#') My Tasks
+        a.nav-link(href='#') Contact
+    .container-fluid
+      .row
+        nav.col-sm-3.col-md-2.hidden-xs-down.bg-faded.sidebar
+          ul.nav.nav-pills.flex-column
+            li.nav-item
+              a.nav-link.active(href='#')
+                | Tast List
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/addtask') New task 
+            li.nav-item
+              a.nav-link(href='/edit') Edit task
+            li.nav-item
+              a.nav-link(href='/remove') Remove task
+        main.col-sm-9.offset-sm-3.col-md-10.offset-md-2.pt-3
+          h2 Task List
+          .table-responsive
+            table.table.table-striped
+              thead
+                tr
+                  th Id
+                  th Task Name
+                  th Who is Responsible
+                  th Date
+                  th Edit
+              tbody
+              each task in myJson
+                tr
+                  td= task._id
+                  td= task.taskname
+                  td= task.responsible
+                  td= task.date
+
+
+  script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')

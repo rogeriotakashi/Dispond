@@ -4,13 +4,11 @@ var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var db;
 
-
-
 app.use(express.static(__dirname + '/css'));
-
 app.use(bodyParser.urlencoded({extended:false}));
 
-
+app.set('views','./views');
+app.set('view engine','pug');
 
 
 
@@ -23,7 +21,7 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
-// This responds a POST request for the homepage
+
 app.get('/register', function (req, res) {
     res.sendFile(__dirname + '/register.html');
 });
@@ -42,8 +40,14 @@ app.post('/insertUser', function (req, res) {
     res.redirect('/');
 });
 
-app.get('/dashboard', function (req, res) {   
-    res.sendFile(__dirname + '/dashboard.html');
+app.get('/dashboard', function (req, res) {
+    db.collection('Tasks').find({}).toArray(function(err, result){
+        if(err) throw err;     
+   
+        res.render('dashboard',{myJson : result});
+
+    });
+
 })
 
 app.post('/authentication',function(req,res){
@@ -83,6 +87,7 @@ app.post("/add", function(req,res){
 
     res.redirect('/dashboard');
 });
+
 
 
 
