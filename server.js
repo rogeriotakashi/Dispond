@@ -69,7 +69,7 @@ app.post('/authentication',function(req,res){
 });
 
 app.get("/addtask", function (req,res){ 
-    res.sendFile(__dirname + "/addtask.html");
+    res.render('addtask');
 });
 
 app.post("/add", function(req,res){

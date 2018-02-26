@@ -1,31 +1,24 @@
 doctype html
 html(lang='en')
   include includes/header.pug
-  body  
+  body
     include includes/menu.pug
     .container-fluid
       .row
         include includes/side-menu.pug
-        main.col-sm-9.offset-sm-3.col-md-10.offset-md-2.pt-3
-          h2 Task List
-          .table-responsive
-            table.table.table-striped
-              thead
-                tr
-                  th Id
-                  th Task Name
-                  th Who is Responsible
-                  th Date
-                  th Edit
-              tbody
-              each task in myJson
-                tr
-                  td= task._id
-                  td= task.taskname
-                  td= task.responsible
-                  td= task.date
-
-
+        main.col-sm-4.offset-sm-3.col-md-5.offset-md-2.pt-3
+          h2 Add new task!
+          form(action='/add', method='POST')
+            .form-group
+              label(for='taskname') Task Name:
+              input#taskname.form-control(type='text', name='taskname')
+            .form-group
+              label(for='responsible') Resposible:
+              input#resposible.form-control(type='text', name='responsible')
+            .form-group
+              label(for='date') Date:
+              input#date.form-control(type='date', name='date')
+            input.btn.btn-primary(type='submit', value='Add Task')
   script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
   script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
