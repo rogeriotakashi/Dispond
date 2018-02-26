@@ -10,12 +10,9 @@ html(lang='en')
     // Custom styles for this template
     link(href='dashboard.css', type='text/css', rel='stylesheet')
   body
-    nav.navbar.fixed-top
-      ul.navbar.mr-auto
-        a.navbar-brand(href='#') Dispond
-        a.nav-link(href='#') Home
-        a.nav-link(href='#') My Tasks
-        a.nav-link(href='#') Contact
+    
+    include includes/menu.pug
+
     .container-fluid
       .row
         nav.col-sm-3.col-md-2.hidden-xs-down.bg-faded.sidebar
