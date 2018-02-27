@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var MongoClient = require('mongodb').MongoClient;
+var ObjectId = require('mongodb').ObjectID;
 var db;
 
 app.use(express.static(__dirname + '/css'));
@@ -68,8 +69,21 @@ app.post('/authentication',function(req,res){
     
 });
 
-app.get("/addtask", function (req,res){ 
-    res.render('addtask');
+app.get("/task/add", function (req,res){ 
+    res.render('task');
+});
+
+app.get("/task/edit/:id",function(req,res){
+    var id = req.params.id;
+
+    db.collection('Tasks').findOne({"_id" : ObjectId(id) },function (err,result){
+        if(err)throw err;
+
+        res.send(result.taskname);
+    });
+
+
+    
 });
 
 app.post("/add", function(req,res){
