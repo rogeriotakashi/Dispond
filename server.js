@@ -70,7 +70,7 @@ app.post('/authentication',function(req,res){
 });
 
 app.get("/task/add", function (req,res){ 
-    res.render('task');
+    res.render('task_add');
 });
 
 app.get("/task/edit/:id",function(req,res){
@@ -79,11 +79,30 @@ app.get("/task/edit/:id",function(req,res){
     db.collection('Tasks').findOne({"_id" : ObjectId(id) },function (err,result){
         if(err)throw err;
 
-        res.send(result.taskname);
+        res.render('task_edit',{task : result});
     });
 
+});
 
-    
+app.post("/save", function(req,res){
+    var id = req.body.id;
+    var taskname = req.body.taskname;
+    var responsible = req.body.responsible;
+    var date = req.body.date;
+
+    db.collection('Tasks').update(
+        {'_id': ObjectId(id)},
+        {
+            taskname: taskname,
+            responsible:responsible,
+            date:date
+        }
+    );
+
+    res.redirect('/dashboard')
+
+
+
 });
 
 app.post("/add", function(req,res){

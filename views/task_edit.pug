@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  include includes/header.pug
+  body
+    include includes/menu.pug
+    .container-fluid
+      .row
+        include includes/side-menu.pug
+        main.col-sm-4.offset-sm-3.col-md-5.offset-md-2.pt-3
+          h2 Edit task
+          form(action='/save', method='POST')
+            input#id(name="id" type="hidden" value=task._id)
+            .form-group
+              label(for='taskname')
+              input#taskname.form-control(type='text', name='taskname' value=task.taskname)
+            .form-group
+              label(for='responsible') Resposible:
+              input#resposible.form-control(type='text', name='responsible' value=task.responsible)
+            .form-group
+              label(for='date') Date:
+              input#date.form-control(type='date', name='date' value=task.date)
+            input.btn.btn-primary(type='submit', value='Save Changes')
+  include includes/scripts.pug

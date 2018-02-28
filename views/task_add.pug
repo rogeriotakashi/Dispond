@@ -8,10 +8,9 @@ html(lang='en')
         include includes/side-menu.pug
         main.col-sm-4.offset-sm-3.col-md-5.offset-md-2.pt-3
           h2 Add new task!
-          h2=test
           form(action='/add', method='POST')
             .form-group
-              label(for='taskname') Task Name:
+              label(for='taskname')
               input#taskname.form-control(type='text', name='taskname')
             .form-group
               label(for='responsible') Resposible:
