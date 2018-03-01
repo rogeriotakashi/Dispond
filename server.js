@@ -84,6 +84,16 @@ app.get("/task/edit/:id",function(req,res){
 
 });
 
+app.get("/task/delete/:id",function(req,res){
+    var id = req.params.id;
+
+    db.collection('Tasks').remove({'_id':ObjectId(id)});
+
+    res.redirect('/dashboard');
+
+
+});
+
 app.post("/save", function(req,res){
     var id = req.body.id;
     var taskname = req.body.taskname;

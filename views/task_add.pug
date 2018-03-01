@@ -10,7 +10,7 @@ html(lang='en')
           h2 Add new task!
           form(action='/add', method='POST')
             .form-group
-              label(for='taskname')
+              label(for='taskname') Task Name:
               input#taskname.form-control(type='text', name='taskname')
             .form-group
               label(for='responsible') Resposible:

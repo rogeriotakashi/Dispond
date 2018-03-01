@@ -11,7 +11,7 @@ html(lang='en')
           form(action='/save', method='POST')
             input#id(name="id" type="hidden" value=task._id)
             .form-group
-              label(for='taskname')
+              label(for='taskname') Task Name:
               input#taskname.form-control(type='text', name='taskname' value=task.taskname)
             .form-group
               label(for='responsible') Resposible:

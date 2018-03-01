@@ -73,3 +73,24 @@ h1 {
 	background-color:#000;
 	padding-bottom: 50px;
 }
+
+.menustyle{
+  background-color:#2C2F33;
+  padding: 0;
+}
+
+.menuitem{
+  color:#FFF;
+}
+
+.menutitle{
+  color:#7289DA;
+}
+
+.sidemenu{
+  background-color:#2a2d32;
+}
+
+.removelink{
+  color:#DC143C;
+}

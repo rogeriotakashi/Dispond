@@ -24,5 +24,7 @@ html(lang='en')
                   td= task.date
                   td
                     a(href="/task/edit/"+task._id) Edit
+                  td
+                    a.removelink(href="/task/delete/"+task._id) X
 
   include includes/scripts.pug
