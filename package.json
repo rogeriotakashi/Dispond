@@ -4,7 +4,7 @@
   "description": "An simple Node.js project",
   "main": "NodeServerScript.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "nodemon": "^1.14.12"
+    "mocha": "^5.0.1",
+    "nodemon": "^1.14.12",
+    "supertest": "^3.0.0"
   }
 }
